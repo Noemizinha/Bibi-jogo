@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nossa História ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     CENA / DIÁLOGOS
+========================= -->
+
+<div id="cena" style="display:none;">
+  <div id="cena-conteudo"></div>
+</div>
+
+<!-- =========================
+     ÁLBUM DE STICKERS
+========================= -->
+
+<div id="colecao" style="display:none;">
+
+  <div id="colecao-box">
+
+    <h2>📖 Coleção de Memórias</h2>
+
+    <div class="sticker">⬜ Primeiro Edit</div>
+    <div class="sticker">⬜ Minecraft</div>
+    <div class="sticker">⬜ Green Hell</div>
+    <div class="sticker">⬜ Stardew Valley</div>
+    <div class="sticker">⬜ Hanako-kun</div>
+    <div class="sticker">⬜ Percy Jackson</div>
+    <div class="sticker">⬜ Madrugadas</div>
+    <div class="sticker">⬜ Primeiro Beijo</div>
+    <div class="sticker" id="sticker-flor">
+⬜ Flor Delicada
+</div>
+
+    <button onclick="fecharColecao()">
+      Fechar
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================
+     INSTAGRAM
+========================= -->
+
+<div id="instagram" style="display:none;">
+
+  <div id="insta-box">
+
+    <div id="insta-topo">
+
+      <div id="perfil-foto">💖</div>
+
+      <div id="perfil-nome">
+        @noemi_e_bibi
+      </div>
+
+    </div>
+
+<div id="stories">
+
+ <div class="story" onclick="abrirStory()">
+
+  <div class="story-foto">💖</div>
+
+  <span>Nosso Edit</span>
+
+</div>
+
+  <div class="story">
+    <div class="story-circulo">🎮</div>
+    <div class="story-nome">Mine</div>
+  </div>
+
+  <div class="story">
+    <div class="story-circulo">🌙</div>
+    <div class="story-nome">Noites</div>
+  </div>
+
+  <div class="story">
+    <div class="story-circulo">🌸</div>
+    <div class="story-nome">Fofo</div>
+  </div>
+
+</div>
+
+    <div id="feed">
+
+      <!-- POST 1 -->
+
+<div class="post">
+
+  <div class="post-topo">
+
+    <div class="foto-perfil">💖</div>
+
+    <div>
+
+      <strong>@noemi_e_bibi</strong>
+
+      <br>
+
+      <small>Primeira lembrança</small>
+
+    </div>
+
+  </div>
+
+  <video controls width="100%">
+
+    <source src="img/edit.mp4" type="video/mp4">
+
+  </video>
+
+  <div class="acoes-post">
+
+    ❤️ 💬 ✈️
+
+  </div>
+
+  <div id="curtidas">
+
+❤️ <span id="numero-curtidas">999</span> curtidas
+
+</div>
+
+<button id="btn-curtir"
+onclick="curtirPost()">
+
+❤️ Curtir
+
+</button>
+
+  </div>
+
+  <div class="legenda">
+
+    <strong>@noemi_e_bibi</strong>
+
+    O edit que mudou tudo. 🩷
+
+  </div>
+
+  <div class="comentario">
+
+    <strong>Bibi:</strong>
+
+    gostei do edit 👀
+
+  </div>
+
+  <div class="comentario">
+
+    <strong>Noemi:</strong>
+
+    calma aí eu não estava preparada 😭
+
+  </div>
+
+</div>
+
+      <!-- POSTS FUTUROS -->
+
+<div class="post bloqueado">
+
+<div class="post-texto">
+
+🔒 Minecraft
+
+<br><br>
+
+Encontre o sticker correspondente
+para desbloquear esta memória.
+
+</div>
+
+</div>
+
+<div class="post bloqueado">
+
+<div class="post-texto">
+
+🔒 Madrugadas
+
+<br><br>
+
+Encontre o sticker correspondente
+para desbloquear esta memória.
+
+</div>
+
+</div>
+
+    </div>
+
+    <button onclick="fecharInstagram()">
+      Fechar
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================
+     PORTAL
+========================= -->
+
+<div id="portal-screen">
+
+  <h1>❤️ Nossa História ❤️</h1>
+
+  <div id="portal"></div>
+
+  <p id="texto">
+    Clique no portal para atravessar...
+  </p>
+
+  <p id="contador">
+    0 / 5
+  </p>
+
+</div>
+
+<!-- =========================
+     JOGO
+========================= -->
+
+<div id="game-screen">
+
+  <h2>❤️ Bem-vindo ao nosso mundo ❤️</h2>
+
+  <div id="interacao">
+
+    Pressione E para interagir
+
+  </div>
+
+  <div id="mapa">
+
+    <!-- MARIPOSA -->
+
+ <img src="img/mariposa.png" id="mariposa">
+
+    <!-- EASTER EGG -->
+
+<img src="img/flor-delicada.png" id="flor-delicada">
+
+    <!-- NUVENS -->
+
+    <img src="img/nuvem.png" class="nuvem" id="nuvem1">
+<img src="img/nuvem.png" class="nuvem" id="nuvem2">
+<img src="img/nuvem.png" class="nuvem" id="nuvem3">
+
+<img src="img/arvore.png" id="arvore">
+
+    <!-- FLORES -->
+
+<img src="img/tulipa.png" class="flor-pixel" id="flor1">
+<img src="img/tulipa.png" class="flor-pixel" id="flor2">
+<img src="img/tulipa.png" class="flor-pixel" id="flor3">
+
+    <!-- BIBI -->
+
+    <div id="bibi"></div>
+
+    <!-- CHÃO -->
+
+    <div id="chao"></div>
+
+  </div>
+
+  <!-- CONTROLES MOBILE -->
+
+  <div id="controles">
+
+    <button id="esquerda">
+      ⬅️
+    </button>
+
+    <button id="direita">
+      ➡️
+    </button>
+
+    <button id="pular">
+      ⬆️
+    </button>
+
+    <button id="acao">❤️ Interagir</button>
+
+    <button id="btn-colecao">
+      📖
+    </button>
+
+  </div>
+
+  <!-- CONTROLES PC -->
+
+  <div id="ajuda-pc">
+
+    ⌨️ PC:
+    A/D ou ← →
+    • Espaço = Pular
+    • E = Interagir
+    • C = Coleção
+
+  </div>
+
+</div>
+
+<audio id="musica">
+
+  <source src="img/slow.mp3" type="audio/mpeg">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
