@@ -94,7 +94,7 @@ posicao += 10;
 
 bibi.style.left = posicao + "px";
 
-bibi.style.transform = "scaleX(-1)";
+bibi.style.transform = "scaleX(1)";
 
 animarBibi();
 
@@ -106,7 +106,7 @@ posicao -= 10;
 
 bibi.style.left = posicao + "px";
 
-bibi.style.transform = "scaleX(1)";
+bibi.style.transform = "scaleX(-1)";
 
 animarBibi();
 
