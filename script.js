@@ -363,6 +363,36 @@ function fecharInstagram(){
 
 }
 
+function curtirPost(){
+
+if(curtido) return;
+
+curtido = true;
+curtidas++;
+
+document.getElementById("numero-curtidas").innerText = curtidas;
+document.getElementById("btn-curtir").innerText = "💖 Curtido";
+
+// 💖 criar coração subindo
+const heart = document.createElement("div");
+heart.classList.add("heart-pop");
+heart.innerText = "💖";
+
+document.body.appendChild(heart);
+
+// posição perto do botão
+const rect = document.getElementById("btn-curtir").getBoundingClientRect();
+
+heart.style.left = rect.left + "px";
+heart.style.top = rect.top + "px";
+
+// remove depois
+setTimeout(()=>{
+heart.remove();
+},1000);
+
+}
+
 /* =========================
    COLEÇÃO
 ========================= */
