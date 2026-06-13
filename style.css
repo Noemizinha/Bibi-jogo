@@ -594,3 +594,23 @@ font-size:12px;
 
 margin-top:5px;
   }
+
+.heart-pop{
+position:fixed;
+font-size:24px;
+color:#ff2d7a;
+animation: subir 1s linear forwards;
+pointer-events:none;
+z-index:99999;
+}
+
+@keyframes subir{
+0%{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+100%{
+transform:translateY(-120px) scale(1.5);
+opacity:0;
+}
+}
