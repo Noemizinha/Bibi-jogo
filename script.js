@@ -393,6 +393,13 @@ heart.remove();
 
 }
 
+const story =
+document.querySelector(".story-novo");
+
+if(story){
+story.classList.remove("story-novo");
+}
+
 /* =========================
    COLEÇÃO
 ========================= */
