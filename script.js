@@ -422,38 +422,19 @@ function fecharColecao(){
 document.getElementById("colecao").style.display = "none";
 }
 
-function abrirStoryEdit(){
+function abrirStory(){
 
-  document.getElementById("cena").style.display =
-  "flex";
+document.getElementById("cena").style.display = "flex";
+document.getElementById("cena-conteudo").innerHTML = `
+  <video autoplay controls width="100%">
+    <source src="img/story.mp4" type="video/mp4">
+  </video>
 
-  document.getElementById("cena-conteudo").innerHTML = `
-
-    <h2>💌 O Edit</h2>
-
-    <video controls width="100%">
-
-      <source src="img/edit.mp4" type="video/mp4">
-
-    </video>
-
-    <p style="margin-top:10px;">
-
-      Foi só um edit...
-      mas acabou mudando tudo. 🩷
-
-    </p>
-
-    <button onclick="fecharCena()">
-
-      Fechar
-
-    </button>
-
-  `;
+  <button onclick="fecharCena()">Fechar</button>
+`;
 
 }
-
+   
 const somPasso = new Audio("img/passo.mp3");
 
 function tocarPasso(){
